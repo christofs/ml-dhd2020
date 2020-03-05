@@ -51,75 +51,121 @@ Christof Schöch (Trier)
 
 
 -
-# Einige rezente Positionierungen zu ML/AI
+## Thema
+* Sinnvoller Einsatz von ML in den GW <!-- .element: class="fragment" data-fragment-index="1" -->
+  * nicht als Mittel zum Zweck
+  * sondern als Erkenntnisinstrument
+* Aspekte <!-- .element: class="fragment" data-fragment-index="2" -->
+  * Ist das überhaupt möglich? Positionen
+  * Herausforderung 'Operationalisierung'
+  * Grade der Klassenzugehörigkeit modellieren
+
+-
+# Neuere Positionierungen zu ML/AI
 
 --
-## Kathy O'Neill
-<img src="img/oneill.jpg" height="250" align="middle"/>
-* *Weapons of Math Destruction* (2016)
-* populärwissenschaftlich, allgemein, kritisch
-* Grundposition: ML / KI haben gefährliche Fehler, unsichtbare Biases, unerwünschte Effekte; insbesondere rassistische Biases.
+### Kathy O'Neill<br/>*Weapons of Math Destruction* (2016)
+<img src="img/oneill.jpg" height="350" align="middle"/>
+* ML / KI haben gefährliche Fehler, unerwünschte Effekte, unsichtbare (insbesondere rassistische) Biases
 
 --
-## Sebastian Ruder
-* "NLP's ImageNet moment has arrived" (2018)
-* Grundposition: Der Wechsel von Wort-Vektoren zu vortrainierten Sprachmodellen ist ein game changer für NLP
-* https://thegradient.pub/nlp-imagenet/
+### Katharina Zweig<br/>*Ein Algorithmus hat kein Taktgefühl* (2019)
+<img src="img/zweig.jpg" height="300" align="middle"/>
+* Bestimmte Algorithmen erfordern Prüfung: Entscheidungen über menschliche Schicksale
+* Viele andere können nützliche Aufgaben für uns übernehmen
+
+--
+### Sebastian Ruder<br/>"NLP's ImageNet moment has arrived" (2018)
+<img src="img/ruder.png" height="350" align="middle"/>
+* Der Wechsel von Wort-Vektoren zu vortrainierten Sprachmodellen ist ein 'game changer' für NLP
+
+--
+### Nan Z. Da<br/>"The Computational Case Against CLS" (2019)
+<img src="img/da.png" height="350" align="middle"/>
+* Quantitative Verfahren sind grundsätzlich nicht geeignet, relevante Aussagen über literarische Texte zu generieren.
 
 --
 ## Katharina Zweig
-<img src="img/zweig.jpg" height="250" align="middle"/>
-* *Ein Algorithmus hat kein Taktgefühl* (2019)
-* populäriwssenschaftlich, allgemein, differenziert
-* Grundposition: Bestimmte Klassen von Algorithmen sollten sehr kritisch begutachtet werden (Entscheidungen über menschliche Schicksale); andere können viele nützliche Aufgaben für uns übernehmen
-
---
-## Katharina Zweig
-Naturwissenschaften vs. Geisteswissenschaften?
+### Naturwissenschaften vs. Geisteswissenschaften?
+<br/>
+<br/>
 >"Als Biochemiker ist man sehr detailverliebt und kontextsensitiv. Biochemikerinnen und Biochemikern ist es immer klar, dass beispielsweise nicht alle genetischen Informationen einer Zelle auch zu jedem Zeitpunkt in Form von Proteinen vorliegen. Daher betrachten wir immer das Gesamtsystem." (S. 64)
-
---
-## Brian Cantwell Smith
-<img src="img/cantwell.jpg" height="250" align="middle"/>
-* *The Promise of Artificial Intelligence. Reckoning and Judgment*
-* fachwissenschaftlich, allgemein, kritisch
-* Die drei Wellen der KI haben keine menschliche Intelligenz erreicht; menschliche Intelligenz ist kategorial anders als KI
-
---
-## Ted Underwood
-<img src="img/underwood.png" height="500"/>
-<br/><small>Source: @Ted_Underwood, Twitter, 31. Januar 2020, https://twitter.com/Ted_Underwood/status/1222270714268528640</small>
-
---
-## Nan Z. Da
-<img src="img/da.png" height="250" align="middle"/>
-* "The Computational Case Agains CLS" (2019)
-* Fachwissenschaftlich, speziell CLS, kritisch
-* Grundposition: Quantitative Verfahren sind nicht geeignet, relevante Aussagen über literarische Texte zu generieren.
 
 
 -
-## Aktuelle Entwicklungen in den CLS
+# Herausforderung 1:<br/>'Operationalisierung'
 
 --
-## Ted Underwood, *Distant Horizons* (2019)
+## European Literary Text Collection (ELTeC)
+<img src="img/distantreading_logo.png" height="70" align="middle"/>
+* COST Action *Distant Reading for European Literary History*
+* Ziel: vergleichbare Sammlungen von je 100 Romanen in 10-15 Sprachen
+* Korpus-Design: 1840-1919; author gender, text length, time period, canonicity
+* Sagten Sie 'Kanonisierungsgrad'? <!-- .element: class="fragment" data-fragment-index="1" -->
 
 --
-## Richard Jean So. et. al 2019
+## Vertikale Stratifikation von Literatur
+<img src="img/vertical-stratification.png" height="500" align="middle"/>
+
+
+-
+# Herausforderung 2:<br/>Unscharfe Klassen
+
+--
+## So and Roland 2020
+* Richard Jean So and Edwin Roland, "Race and Distant Reading", PMLA (2020)
+* Methode: traditionelles Machine Learning (kein Deep Learning)
+* Korpus:
+    * 2x220 englische Romane 1950-2000
+    * Autor*innen, die als "black" oder "white" identifiziert wurden
+
+--
+## Quantifizierung?
+>But for the most part, scholars [...] have shied away from using large-­scale quantitative methods to explore questions of identity, particularly questions of racial identity and minority discourse. The reasons for this are not difficult to fathom. Distant reading requires quantification. Reading race distantly thus requires the quantification of racial identity or racialized language. [...] By contrast, cultural and historical approaches to race emphasize its social constructedness. Race is a category that escapes measurement or simply renders it untenable. (S. 2)
+
+--
+## Vorgehensweise
+* Lexikalische und narrative Merkmale
+* Klassifikationsaufgabe (logistic regression)
+* Aber: nicht binäre Klassenzuordnung
+* Sondern: Wahrscheinlichkeit für jeden Text
+
+--
+## A predictive model of authorial race
+<a href="img/so-2020.png"><img src="img/so-2020.png" height="500"/></a>
+
+
+-
+# Danke!
+
+-
+# Bonus
+
+--
+## Herausforderung 2:
+>If we gave you a short passage from a novel and only told you that the text was written by an American author and published between 1950 and 2000, could you guess that author’s racial identity? In just asking this question, we see how preposterous and likely offensive this exercise is. Any attempt to associate diction and syntax, or style and narrative, with race will likely end up reproducing stereotypes. Black writers only write about X or Y, while white writers write about A or B. These are claims rooted in reductive and racist assumptions about identity.
+
+--
+## Problem 2: Korpus und Bias
+* 220 Romane von "black authors" (random sample aus 1200 insgesamt identifizierten Romanen); author gender;
+* 220 Romane von "white authors" (random sample (stratified by genre) aus 20.000 "most held" Romanen): vier "genres"
+
 
 --
 ## Ausgangspunkt
 >It’s likely easier to accept measuring a novel’s popularity by sales figures or classifying its genre by diction than labeling it according to discrete racial identifiers. Such labeling is an affront to critical race studies, which has taken as its very mission the deconstruction of racial categories. (S. 2)
 
 --
-##
+## Brian Cantwell Smith
+### *The Promise of Artificial Intelligence*, 2019
+<img src="img/cantwell.jpg" height="250" align="middle"/>
+* Die drei Wellen der KI haben keine menschliche Intelligenz erreicht
+* menschliche Intelligenz ist kategorial anders als KI
 
 --
-## Vertikale Stratifikation von Literatur
-<img src="img/vertical-stratification.png" height="450" align="middle"/>
-
--
-# Conclusions
+## Ted Underwood
+<img src="img/underwood.png" height="500"/>
+<br/><small>Source: @Ted_Underwood, Twitter, 31. Januar 2020, https://twitter.com/Ted_Underwood/status/1222270714268528640</small>
 
 
 -
