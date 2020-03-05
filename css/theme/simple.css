@@ -134,7 +134,8 @@ body {
 .reveal blockquote {
   display: block;
   position: relative;
-  width: 70%;
+  font-size: 1.2em; 
+  width: 80%;
   margin: 20px auto;
   padding: 5px;
   font-style: italic;
